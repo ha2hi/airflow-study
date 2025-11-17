@@ -47,6 +47,6 @@ with DAG(
 ```
 - schedule에서 `|`로 지정하는 경우 OR, `&`로 지정하는 경우 AND다.  
 - extra는 추가적인 정보일뿐 실행에 영향을 미치지 않는다.
-
+- 파일 경로를 URL라고 하는데 Consumer DAG에서 지정한 URL는 실제 파일이 업로드 되었는지 확인하는 것이 아니라 Consumer DAG에서 지정한 URI가 업데이트 했다라고 메타데이터에 기록하고, Consumer DAG는 메타데이터를 통해 업데이트되었다고 가정하여 실행되는 방식이다.
 # 참고
 - https://airflow.apache.org/docs/apache-airflow/2.11.0/authoring-and-scheduling/datasets.html
